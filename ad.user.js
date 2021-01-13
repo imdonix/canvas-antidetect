@@ -18,11 +18,18 @@
     waitAll()
     .then(() =>
     {
-        if(jQuery)
+        try
         {
-            $(window).off('focus')
-            $(window).off('blur')
-            console.log(PREFIX + 'active.')
+            if(jQuery)
+            {
+                $(window).off('focus')
+                $(window).off('blur')
+                console.log(PREFIX + 'active.')
+            }
+        }
+        catch(ReferenceError)
+        {
+            console.log(PREFIX + 'login page.')
         }
     })
     .catch((err) =>
