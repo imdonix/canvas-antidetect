@@ -2,6 +2,7 @@
 // @name         Canvas AntiDetect
 // @namespace    http://tampermonkey.net/
 // @version      0.1
+// @downloadURL  https://github.com/imdonix/canvas-antidetect/raw/master/antidetect.js
 // @description  Prevent canvas to detect blur or focus events.
 // @author       donix
 // @include      https://canvas.elte.hu/*
