@@ -20,9 +20,12 @@
     waitAll()
     .then(() =>
     {
-        $(window).off('focus')
-        $(window).off('blur')
-        console.log(PREFIX + 'active.')
+        if(jQuery)
+        {
+            $(window).off('focus')
+            $(window).off('blur')
+            console.log(PREFIX + 'active.')
+        }
     })
     .catch((err) =>
     {
