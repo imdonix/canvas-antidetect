@@ -46,7 +46,7 @@
             {
                 clearInterval(check)
                 rej('timeout')
-            }, TIMEOUT)
+            }, 5000)
         })
     }
 })();
