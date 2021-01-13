@@ -11,8 +11,6 @@
 
 
 (function() {
-    'use strict';
-
     const PREFIX = '[AntiDetect] '
 
     console.log(PREFIX + 'loading...')
