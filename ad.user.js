@@ -22,9 +22,14 @@
         {
             if(jQuery)
             {
-                $(window).off('focus')
-                $(window).off('blur')
-                console.log(PREFIX + 'active.')
+                setInterval(() => 
+                {
+                    if(!checkTrackingEvents())
+                    {
+                        disableTrackingEvents()
+                        console.log(PREFIX + 'events disabled.')
+                    }                        
+                }, 1000)
             }
         }
         catch(ReferenceError)
@@ -57,4 +62,17 @@
             }, 5000)
         })
     }
+
+    function disableTrackingEvents()
+    {
+        $(window).off('focus')
+        $(window).off('blur')
+    }
+
+    function checkTrackingEvents()
+    {
+        let events = jQuery._data(window, "events")
+        return events.blur === undefined && events.focus === undefined
+    }
+
 })();
