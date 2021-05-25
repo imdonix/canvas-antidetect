@@ -15,7 +15,7 @@ Canvas have a `event_manager` which track user interactions.
 
 The `page_focused` and `page_blurred` events are registred with jquery in the `event_tracker.js`:
 
-So we can `$(selector).off` the needed events from the `window` which remove the event handlers added by the tracker.
+By overrideing the `Window.prototype.addEventListener` with a custom function we can filter the `focus` & `blur`.
 
 These won't prevent any other quizze events to be reported so it won't be suspicious.
 
