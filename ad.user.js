@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Canvas AntiDetect
 // @namespace    https://github.com/imdonix/canvas-antidetect
-// @version      0.3
+// @version      0.4
 // @downloadURL  https://github.com/imdonix/canvas-antidetect/raw/master/ad.user.js
 // @description  Prevent canvas to detect blur and focus events.
 // @author       donix
